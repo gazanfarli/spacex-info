@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.navbar {
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2rem 1.4rem 2rem calc(45%);
+}
+
+.navbar ul li {
+    position: relative;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 1.8rem;
+    font-family: "Roboto";
+    font-weight: 100;
+    cursor: pointer;
+    padding: 0.25rem;
+    color: #bec0c4;
+}
+
+.navbar ul li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    will-change: width;
+    background: rgb(0, 111, 185);
+    transition: width 0.3s ease-out 0s;
+}
+
+.navbar ul li:hover::before{
+    width: 100%;
+}

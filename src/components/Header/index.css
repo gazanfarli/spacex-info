@@ -1,0 +1,5 @@
+.header {
+    background: url("../../assets/images/home_bg.jpg") no-repeat;
+    background-size: cover;
+    padding-bottom: 0.5rem;
+}
