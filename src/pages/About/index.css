@@ -1,0 +1,36 @@
+.about {
+    background: url("../../assets/images/about_bg.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.about_article {
+    font-family: "Roboto";
+    width: 50rem;
+    height: 23rem;
+    color: white; 
+    padding: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 0.8rem; 
+    margin-top: 4rem;
+}
+
+.about_article h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.about_article p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.about_article a {
+    text-decoration: none;
+    color: #006FB9;
+}

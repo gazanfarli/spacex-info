@@ -1,5 +1,10 @@
 .header {
-    background: url("../../assets/images/home_bg.jpg") no-repeat;
+    background: black;
     background-size: cover;
+}
+
+.header_home {
+    background: url("../../assets/images/home_bg.jpg");
     padding-bottom: 0.5rem;
+    height: 100vh;
 }

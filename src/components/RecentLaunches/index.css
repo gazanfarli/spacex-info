@@ -7,6 +7,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .recent_launches .top h1 {
@@ -22,20 +23,36 @@
     flex-flow: wrap;
     text-align: center;
     justify-content: space-evenly;
+    margin-bottom: 3rem;
 }
 
 .recent_item {
     color: white;
-    padding: 0.5rem;
+    padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 0.5rem;
     transition: 0.4s all;
 }
 
-.recent_item img {
+.recent_item:hover {
+    background-color: #111;
+}
+
+.recent_item h3 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: #006FB9;
+    margin: 0 0 0.6rem 0;
+}
+
+.recent_item .recent_item_photo {
     width: 14rem;
 }
 
-.recent_item:hover {
-    background-color: #111;
+.show_more {
+    width: 10.2rem;
+}
+
+a {
+    text-decoration: none;
 }

@@ -1,0 +1,82 @@
+.vehicles {
+    position: relative;
+}
+
+.description {
+    font-family: "Roboto";
+    width: 28rem;
+    position: absolute;
+    color: #bec0c4;
+    font-size: 1.2rem;
+    font-weight: 100;
+    left: 5rem;
+}
+
+.description h1 {
+    color: white;
+}
+
+.description a {
+    text-decoration: none;
+    color: #006FB9;
+}
+
+.vehicle_list {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    margin: 0;
+}
+
+.vehicle_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.vehicle_title {
+    font-family: "Roboto";
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: white;
+    text-align: left;
+    margin: 0 0 1rem 0;
+}
+
+.vehicle_item_div {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #b4b4b4;
+    border-left: 1px solid #b4b4b4;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top-left-radius: 0.5rem;
+    padding: 1rem 4rem 0.25rem 4rem;
+    transition: 0.7s all;
+}
+
+.vehicle_item_div:hover {
+    border-right: 1px solid #b4b4b4;
+    border-bottom: 1px solid #b4b4b4;
+    border-radius: 0.5rem;
+}
+
+.falcon1 {
+    width: 1.2rem;
+    height: 11.8rem;
+}
+
+.falcon9 {
+    width: 2.5rem;
+    height: 22rem;
+}
+
+.falcon_heavy {
+    width: 4.5rem;
+    height: 22rem;
+}
+
+.starship {
+    width: 8.8rem;
+    height: 43.875rem;
+}

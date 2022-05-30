@@ -88,7 +88,6 @@ function HeaderInfo() {
       <div className="quote">
         <p>Rockets are the only form of transportation on Earth where the vehicle is built anew for each journey. What if you had to build a new plane for every flight? - <span className="num">Elon Musk</span></p>
       </div>
-
     </div>
   );
 }

@@ -1,0 +1,36 @@
+.launches {
+    background-color: black;
+    color: white;
+    padding: 0 14rem;
+    font-family: "Roboto";
+}
+
+.latest_launch h1 {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 2rem;
+}
+
+.latest_launch_detail {
+    height: 17rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest_launch_detail #rocketIcon {
+    width: 14rem; 
+    height: 14rem;
+    margin-top: 0.5rem;
+}
+
+.rocket_icon {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest_details {
+    width: 70%;
+}

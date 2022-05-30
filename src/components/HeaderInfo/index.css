@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
-.header_info{
+.header_info {
+    position: relative;
     width: 70%;
     margin: 0 auto;
     color: white;
 }
+
+.header_info::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url("../../assets//images/home_bg.jpg") no-repeat;
+}   
 
 h1 {
     font-size: 3rem;
@@ -34,7 +43,7 @@ h1 .num {
 }
 
 .num {
-    color: #006FB9;
+    color: #006FB9; 
 }
 
 .next_launch li .time_scale {

@@ -1,0 +1,108 @@
+.upcoming_launches {
+    font-family: "Roboto";
+    color: white;
+}
+
+.upcoming_launches h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.upcoming_list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.upcoming_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    padding-right: 6rem;
+    background: #101010;
+    margin-bottom: 2rem;
+    border-radius: 0.6rem;
+    transition: 0.4s all;
+}
+
+.upcoming_item:hover {
+    filter: brightness(130%);
+}
+
+.upcoming_item .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upcoming_item .flight_number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: #bec0c4;
+}
+
+.upcoming_item .top .name {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: #006FB9;
+    margin-bottom: 0.5rem;
+}
+
+.upcoming_item .date {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #bec0c4;
+    margin-bottom: 2rem;
+}
+
+.upcoming_item_info {
+    display: flex;
+}
+
+.upcoming_item_info ul {
+    padding: 0;
+}
+
+.upcoming_item_info .info {
+    margin-right: 1rem;
+}
+
+.upcoming_item_info ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    list-style-type: none;
+    padding: 0.5rem 0.5rem 0.5rem;
+}
+
+.upcoming_item_info .title {
+    color: #bec0c4;
+}
+
+.upcoming_item_info .launch_site {
+    display: flex;
+    flex-direction: row;
+}
+
+.flag {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4.5rem;
+    border-radius: 0 0 0.6rem 0;
+}
+
+.show_all {
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: white;
+}

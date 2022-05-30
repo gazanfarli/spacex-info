@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.footer a {
+    color: #006fb9;
+    text-decoration: none;
+}

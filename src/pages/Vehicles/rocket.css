@@ -1,0 +1,83 @@
+.rocket_page {
+    background-color: black;
+}
+
+.rocket_header h1 {
+    font-family: "Roboto";
+    font-size: 5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.rocket_header .quote {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    color: white;
+}
+
+.rocket_header .quote span {
+    color: #006FB9;
+    margin: 0 0.25rem;
+}
+
+.rocket_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0 20%;
+    color: white;
+    font-family: "Roboto";
+}
+
+.rocket_details {
+    width: 82%;
+}
+
+.rocket_details h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.rocket_photo {
+    width: 5.6rem;
+    height: 56.25rem;
+}
+
+.stages {
+    display: flex;
+}
+
+.stages button {
+    margin-right: 1.5rem;
+}
+
+.parameters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    font-weight: 300;
+    transition: 1s all;
+}
+
+.parameters li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.7rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid white;
+}
+
+.parameter_value {
+    color: #bec0c4;
+}
+
+.rocket_photo_heavy {
+    width: 10rem;
+    height: 56.25rem;
+    margin-right: 2.5rem;
+}

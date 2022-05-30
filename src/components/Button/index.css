@@ -4,9 +4,10 @@ button {
     color: #006FB4;
     border: 1px solid #006FB4;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 1rem 0.6rem;
     transition: 0.4s all;
     cursor: pointer;
+    line-height: 100%;
 }
 
 button:hover {

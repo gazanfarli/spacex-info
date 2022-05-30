@@ -19,7 +19,9 @@ function RecentLaunches() {
     <div className="recent_launches">
       <div className="top">
         <h1>RECENT LAUNCHES</h1>
-        <Button title="SHOW MORE" />
+        <div className="show_more">
+          <Button title="SHOW MORE" />
+        </div>
       </div>
       <Recents recentLaunches={recentLaunches} />
     </div>
