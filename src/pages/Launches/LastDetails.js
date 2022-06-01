@@ -17,7 +17,6 @@ function LastDetails({state, rocket, launchSite, isUpcoming}) {
         <ul className="details_values" style={{marginBottom: "0"}}>
           <li className="rocket_name">{rocket.name}</li>
           <li>{launchSite ? launchSite.full_name : null && "UNKNOWN"}</li>
-          {!isUpcoming && (
             <li style={{padding: "0"}}>
               {state.data.success ? (
                 <div
@@ -40,7 +39,6 @@ function LastDetails({state, rocket, launchSite, isUpcoming}) {
                   />
                 </div>
               ) : (
-                !isUpcoming && (
                   <div
                     className="success"
                     style={{
@@ -60,10 +58,8 @@ function LastDetails({state, rocket, launchSite, isUpcoming}) {
                       alt="space_shuttle"
                     />
                   </div>
-                )
               )}
             </li>
-          )}
         </ul>
       </div>
     </div>

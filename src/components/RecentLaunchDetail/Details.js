@@ -1,11 +1,12 @@
 import React from "react";
 import "./index.css";
+import { convertDate } from "../../Helpers/DateConverter"
 
 function Details({ state, launchSite, rocket, isUpcoming }) {
   return (
     <div className="details">
       <h3>{state.data.name}</h3>
-      <div className="date">{state.data.date_utc}</div>
+      <div className="date">{convertDate(state.data.date_unix)}</div>
       <div className="details_lists">
         <ul className="details_titles">
           <li>ROCKET:</li>

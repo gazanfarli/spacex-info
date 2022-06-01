@@ -4,16 +4,17 @@ const initialState = {
     upcomings: []
 }
 
-const upcomingReducer = (state = initialState, action) => {
-    switch(action.type) {
-        case GET_UPCOMING_LAUNCHES: 
-        return {
-            ...state
-        }
+const UpcomingReducer = (state = initialState.upcomings, action) => {
+    
+    switch (action.type) {
+        case GET_UPCOMING_LAUNCHES:
+            return {
+                ...state, upcomings: action.payload
+            }
         default: return {
             state
         }
     }
 }
 
-export default upcomingReducer;
+export default UpcomingReducer;

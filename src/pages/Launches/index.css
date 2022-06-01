@@ -1,5 +1,5 @@
 .launches {
-    background-color: black;
+    background: black;
     color: white;
     padding: 0 14rem;
     font-family: "Roboto";
@@ -33,4 +33,20 @@
 
 .latest_details {
     width: 70%;
+}
+
+.select {
+    background: black;
+    font-size: 1.25rem;
+    color: #006FB4;
+    border: 1px solid #006FB4;
+    border-radius: 0.5rem;
+    padding: 1rem 0.6rem;
+    transition: 0.4s all;
+    cursor: pointer;
+    line-height: 100%;
+}
+
+.launch_items {
+    margin: 2rem 0 0 0;
 }

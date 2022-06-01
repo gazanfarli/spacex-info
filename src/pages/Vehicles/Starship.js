@@ -62,18 +62,42 @@ function Starship() {
             STATUS: <span style={{ color: "#006FB4" }}>IN DEVELOPMENT</span>
           </h3>
           <div className="stages">
-            <button onClick={overviewHandler} className="button overview">
-              OVERVIEW
-            </button>
-            <button onClick={stage1Handler} className="button stage1">
-              STAGE 1
-            </button>
-            <button onClick={stage2Handler} className="button stage2">
-              STAGE 2
-            </button>
-            <button onClick={landingPageHandler} className="button landing_legs">
-              LANDING LEGS
-            </button>
+          {
+              isOverview ?
+              <div onClick={overviewHandler} className="button">
+                <button className="overview active">OVERVIEW</button>
+              </div> :
+              <div onClick={overviewHandler} className="button">
+                <button className="overview">OVERVIEW</button>
+              </div>
+            }
+            {
+              isStage1 ?
+              <div onClick={stage1Handler} className="button">
+                <button className="stage1 active">STAGE 1</button>
+              </div> :
+              <div onClick={stage1Handler} className="button">
+                <button className="stage1">STAGE 1</button>
+              </div>
+            }
+            {
+              isStage2 ? 
+              <div onClick={stage2Handler}>
+                <button className="stage2 active">STAGE 2</button>
+              </div> :
+              <div onClick={stage2Handler}>
+                <button className="stage2">STAGE 2</button>
+              </div>
+            }
+            {
+              isLandingStage ? 
+              <button onClick={landingPageHandler} className="button landing_legs avtive">
+                LANDING LEGS
+              </button> :
+              <button onClick={landingPageHandler} className="button landing_legs">
+                LANDING LEGS
+              </button>
+            }
           </div>
 
           {isOverview && (

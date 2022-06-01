@@ -1,8 +1,9 @@
-import { GET_UPCOMING_LAUNCHES } from "./actionTypes/enums";
+import { GET_UPCOMING_LAUNCHES } from "./actionTypes/enums"
 
-const getUpcomings = () => {
+const getUpcomings = (data) => {
     return {
-        type: GET_UPCOMING_LAUNCHES
+        type: GET_UPCOMING_LAUNCHES,
+        payload: data
     }
 }
 

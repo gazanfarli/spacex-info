@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Button";
 import "./index.css";
 import { Link } from "react-router-dom";
+import {convertDate} from "../../Helpers/DateConverter";
 
 function RecentLaunchItem({ recentLaunches }) {
 
@@ -15,7 +16,7 @@ function RecentLaunchItem({ recentLaunches }) {
             <div className="recent_item">
               <img className="recent_item_photo" src={item.links.patch.small} alt="recent_item_photo" />
               <h3>{item.name}</h3>
-              <div className="date">{item.date_utc}</div>
+              <div className="date">{convertDate(item.date_unix)}</div>
                 {
                   recentLaunches.success !== true ? 
                     <div className="success" style={{display: "flex", justifyContent: "space-between", padding: "1rem 2.5rem 1rem 2.5rem"}}>

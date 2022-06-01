@@ -38,8 +38,8 @@ h1 .num {
     flex-direction: column;
     font-size: 9rem;
     list-style-type: none;
-    font-family: "Rboto";
-    font-weight: 500;
+    font-family: "Roboto";
+    font-weight: 400;
 }
 
 .num {

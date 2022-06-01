@@ -53,16 +53,11 @@ function RecentLaunchDetail() {
 
   const defineRocketPhoto = (name) => {
     switch (name) {
-      case "Falcon 1":
-        return falcon1Photo;
-      case "Falcon 9":
-        return falcon9Photo;
-      case "Falcon Heavy":
-        return falconHeavyPhoto;
-      case "Starship":
-        return starshipPhoto;
-      default:
-        return null;
+      case "Falcon 1": return falcon1Photo;
+      case "Falcon 9": return falcon9Photo;
+      case "Falcon Heavy": return falconHeavyPhoto;
+      case "Starship": return starshipPhoto;
+      default: return null;
     }
   };
 
@@ -85,15 +80,15 @@ function RecentLaunchDetail() {
           )}
         </div>
         <div className="parameters_container">
-          {state.isUpcoming === undefined && payloads && (
+          {!state.isUpcoming && payloads && (
             <PayloadParam payloads={payloads} />
           )}
 
-          {state.isUpcoming === undefined && (
+          {!state.isUpcoming && (
             <CoreParam state={state} landpad={landpad} />
           )}
 
-          {state.isUpcoming !== undefined && (
+          {state.isUpcoming && (
             <UpcomingParam payloads={payloads} />
           )}
         </div>

@@ -81,3 +81,8 @@
     height: 56.25rem;
     margin-right: 2.5rem;
 }
+
+.active {
+    background: #006FB4;
+    color: black;
+}

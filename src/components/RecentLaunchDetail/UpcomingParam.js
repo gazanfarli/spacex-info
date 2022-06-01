@@ -2,12 +2,6 @@ import React from "react";
 import "./index.css";
 
 function UpcomingParam({ payloads }) {
-  payloads && console.log(payloads);
-  let manufacturers = "";
-  if (payloads) {
-    manufacturers = payloads.manufacturers[0].split(" ").join(", ");
-    console.log(manufacturers);
-  }
   return (
     <div>
       <h1>PAYLOAD #1</h1>
@@ -24,7 +18,7 @@ function UpcomingParam({ payloads }) {
         </li>
         <li className="parameter_item">
           <div>MANUFACTURER</div>
-          {payloads && <div className="parameter_value">{manufacturers}</div>}
+          {payloads && <div className="parameter_value">{payloads.manufacturers[0]}</div>}
         </li>
         <li className="parameter_item">
           <div>TYPE</div>

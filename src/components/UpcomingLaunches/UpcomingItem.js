@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
+import { convertDate } from "../../Helpers/DateConverter";
 
-function UpcomingItem({ upcoming_item }) {
+function UpcomingItem({ upcoming_item, isUpcoming }) {
   const [rocket, setRocket] = useState("");
   const [launchpad, setLaunchpad] = useState("");
 
@@ -18,19 +19,11 @@ function UpcomingItem({ upcoming_item }) {
       .then((data) => {
         setLaunchpad(data);
       });
-  });
+  }, [upcoming_item.launchpad, upcoming_item.rocket]);
 
-  const convertDate = (date) => {
-    let d = new Date(date * 1000);
-    return (
-      d.toDateString().slice(4, d.toDateString().length) +
-      " " +
-      d.toLocaleTimeString()
-    );
-  };
 
   return (
-    <Link key={upcoming_item.id} to='/launch' state={{data: upcoming_item, isUpcoming: true}}>
+    <Link key={upcoming_item.id} to='/launch' state={{data: upcoming_item, isUpcoming: isUpcoming}}>
       <li className="upcoming_item">
         <div className="top">
           <span className="name">{upcoming_item.name}</span>
