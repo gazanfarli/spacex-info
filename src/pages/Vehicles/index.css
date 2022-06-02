@@ -22,6 +22,7 @@
 }
 
 .vehicle_list {
+    padding: 0;
     display: flex;
     justify-content: space-evenly;
     background-color: black;
@@ -79,4 +80,40 @@
 .starship {
     width: 8.8rem;
     height: 43.875rem;
+}
+
+@media (max-width: 840px) {
+    .vehicle_list {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .description {
+        position: static;
+        width: auto;
+        background-color: black;
+        padding: 2rem;
+    }
+    .description p {
+        margin: 0;
+    }
+    .vehicle_item_div {
+        position: relative;
+        width: 20%;
+        margin: 0 auto 4rem auto;
+    }
+    .vehicle_item {
+        margin: 0 auto;
+    }
+    .vehicle_title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .description_heading {
+        font-size: 2rem;
+    }
+    .description p {
+        font-size: 1rem;
+    }
 }

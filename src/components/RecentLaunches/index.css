@@ -56,3 +56,25 @@
 a {
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    .recent_launches .top h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 660px) {
+    .recent_launches .top h1 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .recent_launches .top {
+        flex-direction: column;
+    }
+    .show_more {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

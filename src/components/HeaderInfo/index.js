@@ -56,24 +56,24 @@ function HeaderInfo() {
   return (
     <div className="header_info">
       <h1>
-        NEXT LAUNCH : <span className="num">{nextLaunchTime && nextLaunchTime.name}</span>
+        NEXT LAUNCH : <span style={{color: "#006FB9", fontWeight: "500"}}>{nextLaunchTime && nextLaunchTime.name}</span>
       </h1>
       <ul className="next_launch">
         <li>
           <span className="num">{timeNow.days}</span>
           <span className="time_scale">DAYS</span>
         </li>
-        <li className="num">:</li>
+        <li className="num dots">:</li>
         <li>
           <span className="num">{timeNow.hour}</span>
           <span className="time_scale">HOURS</span>
         </li>
-        <li className="num">:</li>
+        <li className="num dots">:</li>
         <li>
           <span className="num">{timeNow.minutes}</span>
           <span className="time_scale">MINUTES</span>
         </li>
-        <li className="num">:</li>
+        <li className="num dots">:</li>
         <li>
           <span className="num">{timeNow.seconds}</span>
           <span className="time_scale">SECONDS</span>
@@ -86,7 +86,7 @@ function HeaderInfo() {
       </div> : <NextLaunchDetail nextLaunchTime={nextLaunchTime} />
       }
       <div className="quote">
-        <p>Rockets are the only form of transportation on Earth where the vehicle is built anew for each journey. What if you had to build a new plane for every flight? - <span className="num">Elon Musk</span></p>
+        <p>Rockets are the only form of transportation on Earth where the vehicle is built anew for each journey. What if you had to build a new plane for every flight? - <span className="num" style={{fontSize: "1rem"}}>Elon Musk</span></p>
       </div>
     </div>
   );

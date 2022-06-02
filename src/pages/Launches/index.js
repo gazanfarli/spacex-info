@@ -14,7 +14,7 @@ function Launches() {
   return (
     <div className="launches">
       <Latest />
-      <div className="launches_list">
+      <div style={{marginTop: "4rem"}} className="launches_list">
         <select onClick={onClickHandler} className="launches_selection select">
           <option className="select" value="upcoming">UPCOMING LAUNCHES</option>
           <option className="select" value="past">PAST LAUNCHES</option>

@@ -64,7 +64,6 @@ function RecentLaunchDetail() {
   return (
     <div className="recent_launch">
       <RecentDetails isUpcoming={state.isUpcoming} state={state} launchSite={launchSite} rocket={rocket} />
-
       <div className="rocket_parameters">
         <div className="rocket_photo_container">
           {rocket && (

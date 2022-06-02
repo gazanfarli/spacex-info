@@ -15,7 +15,9 @@ function LastDetails({state, rocket, launchSite, isUpcoming}) {
           )}
         </ul>
         <ul className="details_values" style={{marginBottom: "0"}}>
-          <li className="rocket_name">{rocket.name}</li>
+          {
+            rocket && <li className="rocket_name">{rocket.name}</li>
+          }
           <li>{launchSite ? launchSite.full_name : null && "UNKNOWN"}</li>
             <li style={{padding: "0"}}>
               {state.data.success ? (

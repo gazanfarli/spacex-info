@@ -52,6 +52,11 @@ h1 .num {
     color: #bec0c4;
 }
 
+.next_launch .dots {
+    display: flex;
+    justify-content: center;
+}
+
 .show_details {
     width: 100%;
     margin: 3rem 0 0 0;
@@ -100,4 +105,31 @@ h1 .num {
 .titles li, .infos li {
     list-style-type: none;
     padding: 0.25rem;
+}
+
+@media (max-width: 1280px) {
+    .header_info {
+        width: 90%;
+    }
+    .num {
+        font-size: 6rem;
+    }
+    .next_launch .dots {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 990px) {
+    .header_info h1 {
+        font-size: 2.5rem;
+    }
+    .num {
+        font-size: 4rem;
+    }
+    .time_scale {
+        font-size: 0.8rem;
+    }
+    .next_launch .dots {
+        font-size: 3rem;
+    }
 }

@@ -21,6 +21,8 @@ function UpcomingItem({ upcoming_item, isUpcoming }) {
       });
   }, [upcoming_item.launchpad, upcoming_item.rocket]);
 
+  // console.log(rocket)
+
 
   return (
     <Link key={upcoming_item.id} to='/launch' state={{data: upcoming_item, isUpcoming: isUpcoming}}>
@@ -31,18 +33,12 @@ function UpcomingItem({ upcoming_item, isUpcoming }) {
         </div>
         <div className="date">{convertDate(upcoming_item.date_unix)}</div>
         <div className="upcoming_item_info">
-          <ul>
-            <li className="title">ROCKET:</li>
-            <li className="title">COUNTRY:</li>
-          </ul>
-          <ul className="info">
-            <li>{rocket.name}</li>
-            <li>{rocket.country}</li>
-          </ul>
-          <ul className="launch_site">
-            <li className="title">LAUNCH SITE:</li>
-            <li>{launchpad.full_name}</li>
-          </ul>
+            <h3 className="title">ROCKET:</h3>
+            <h3>{rocket.name}</h3>
+            <h3 className="title">LAUNCH SITE:</h3>
+            <h3>{launchpad.full_name}</h3>
+            <h3 className="title">COUNTRY:</h3>
+            <h3>{rocket.country}</h3>
         </div>
         <img
           loading="lazy"

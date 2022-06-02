@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    padding-right: 6rem;
     background: #101010;
     margin-bottom: 2rem;
     border-radius: 0.6rem;
@@ -59,33 +58,20 @@
 }
 
 .upcoming_item_info {
-    display: flex;
+    display: grid;
+    grid-template-columns: max-content max-content max-content auto;
+    grid-template-rows: max-content max-content;
 }
 
-.upcoming_item_info ul {
-    padding: 0;
-}
-
-.upcoming_item_info .info {
-    margin-right: 1rem;
-}
-
-.upcoming_item_info ul li {
-    margin: 0;
-    padding: 0;
+.upcoming_item_info h3  {
     font-size: 0.9rem;
     font-weight: 300;
-    list-style-type: none;
-    padding: 0.5rem 0.5rem 0.5rem;
+    display: inline-block;
 }
 
 .upcoming_item_info .title {
     color: #bec0c4;
-}
-
-.upcoming_item_info .launch_site {
-    display: flex;
-    flex-direction: row;
+    margin-right: 2rem;
 }
 
 .flag {
@@ -105,4 +91,31 @@
 
 a {
     color: white;
+}
+
+@media (max-width: 768px) {
+    .upcoming_launches h1 {
+        font-size: 2rem;
+    }
+    .show_all {
+        width: 100%;
+    }
+}
+
+@media (max-width: 630px) {
+    .upcoming_item_info {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width: 500px) {
+    .flag {
+        width: 2.5rem;
+    }
+    .upcoming_item .flight_number {
+        font-size: 1.4rem;
+    }
+    .upcoming_item .top .name {
+        font-size: 1.4rem;
+    }
 }

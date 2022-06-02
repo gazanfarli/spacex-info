@@ -13,9 +13,7 @@
 }
 
 .latest_launch_detail {
-    height: 17rem;
     display: flex;
-    justify-content: space-between;
 }
 
 .latest_launch_detail #rocketIcon {
@@ -25,14 +23,14 @@
 }
 
 .rocket_icon {
-    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 2rem;
 }
 
 .latest_details {
-    width: 70%;
+    width: 100%;
 }
 
 .select {
@@ -49,4 +47,35 @@
 
 .launch_items {
     margin: 2rem 0 0 0;
+}
+
+@media (max-width: 1280px) {
+    .launches {
+        padding: 0 7rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .launches {
+        padding: 0 3rem;
+    }
+    .latest_launch_detail {
+        flex-direction: column;
+    }
+    .rocket_icon {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 768px) {
+    .latest_launch_detail #rocketIcon {
+        margin-right: 1rem;
+    }
+    .launches {
+        padding: 0 1.5rem;
+    }
+    .latest_launch_heading {
+        font-size: 2rem;
+    }
 }

@@ -6,7 +6,7 @@ function Vehicles() {
   return (
     <div className="vehicles">
       <div className="description">
-        <h1>ROKCETS</h1>
+        <h1 className="description_heading">ROKCETS</h1>
         <p>
           Rockets that are shown below were created by{" "}
           <a href="https://www.spacex.com/">SpaceX</a>. Proportions between

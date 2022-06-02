@@ -14,7 +14,7 @@
 
 .details {
     background: #101010;
-    padding: 1rem 2rem 1rem 1rem;
+    padding: 1rem;
     border-radius: 0.8rem;
 }
 
@@ -78,6 +78,7 @@
 
 .rocket_parameters {
     display: flex;
+    justify-content: space-between;
 }
 
 .rocket_photo_container {
@@ -103,6 +104,6 @@
 }
 
 .parameters {
-    width: 31rem;
+    width: inherit;
     margin: 0;
 }

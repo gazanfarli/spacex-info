@@ -2,3 +2,9 @@
     padding: 2rem calc(15%) 0 calc(15%);
     background-color: black;
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 1.5rem calc(5%) 0 calc(5%);
+    }
+}
