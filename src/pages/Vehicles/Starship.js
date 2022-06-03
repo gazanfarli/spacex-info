@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import "./rocket.css";
 import Navbar from "../../components/Navbar";
+import FlickrImages from "../../components/FlickrImages";
 import background from "../../assets/images/starship_bg.jpg"
+import axios from "axios";
 
 function Starship() {
   const [isOverview, setIsOverview] = useState(true);
   const [isStage1, setIsStage1] = useState(false);
   const [isStage2, setIsStage2] = useState(false);
   const [isLandingStage, setIsLandingStage] = useState(false);
+  const [flickrImages, setFlickrImages] = useState(null);
+
+  useEffect(() => {
+    axios.get("https://api.spacexdata.com/v4/rockets/5e9d0d96eda699382d09d1ee")
+    .then(res => setFlickrImages(res.data.flickr_images));
+  }, [])
 
   const overviewHandler = (e) => {
     setIsOverview(true);
@@ -194,6 +202,9 @@ function Starship() {
           )}
         </div>
       </div>
+      {
+        flickrImages !== null && <FlickrImages images={flickrImages} />
+      }
     </div>
   );
 }

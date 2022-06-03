@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import "./rocket.css";
 import Navbar from "../../components/Navbar";
+import FlickrImages from "../../components/FlickrImages";
 import background from "../../assets/images/falcon9_bg.jpg"
+import axios from "axios";
 
 function Falcon9() {
   const [isOverview, setIsOverview] = useState(true);
   const [isStage1, setIsStage1] = useState(false);
   const [isStage2, setIsStage2] = useState(false);
   const [isLandingStage, setIsLandingStage] = useState(false);
+  const [flickrImages, setFlickrImages] = useState(null);
+
+  useEffect(() => {
+    axios.get("https://api.spacexdata.com/v4/rockets/5e9d0d95eda69973a809d1ec")
+    .then(res => setFlickrImages(res.data.flickr_images));
+  }, [])
 
   const overviewHandler = (e) => {
     setIsOverview(true);
@@ -213,6 +221,9 @@ function Falcon9() {
           )}
         </div>
       </div>
+      {
+        flickrImages !== null && <FlickrImages images={flickrImages} />
+      }
     </div>
   );
 }

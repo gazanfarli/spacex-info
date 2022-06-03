@@ -3,17 +3,15 @@ import "./index.css";
 import { Link } from "react-router-dom";
 import Recents from "./Recents";
 import Button from "../Button";
+import axios from "axios";
 
 function RecentLaunches() {
   const [recentLaunches, setRecentLaunches] = useState();
 
   useEffect(() => {
-    fetch("https://api.spacexdata.com/v4/launches/past")
-      .then(res => res.json())
-      .then(data => {
-        setRecentLaunches(data.slice(data.length - 5, data.length))
-      })
-      .catch(err => console.log(err));
+    axios.get("https://api.spacexdata.com/v4/launches/past")
+    .then(res => setRecentLaunches(res.data.slice(res.data.length - 5, res.data.length)))
+    .catch(err => console.log(err));
   }, [])
 
   return (

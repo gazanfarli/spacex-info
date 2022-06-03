@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import UpcomingItem from "../../components/UpcomingLaunches/UpcomingItem";
 
@@ -5,10 +6,8 @@ function Upcomings() {
   const [upcomings, setUpcomings] = useState();
   
   useEffect(() => {
-    fetch("https://api.spacexdata.com/v4/launches/upcoming")
-    .then(res => res.json())
-    .then(data => setUpcomings(data))
-    .catch(err => console.log(err));
+    axios.get("https://api.spacexdata.com/v4/launches/upcoming")
+    .then(res => setUpcomings(res.data)).catch(err => console.log(err));
   },[])
   
   return (

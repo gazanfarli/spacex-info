@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import {convertDate} from "../../Helpers/DateConverter";
 
 function RecentLaunchItem({ recentLaunches }) {
-
   return (
     <div className="recents">
       {recentLaunches &&

@@ -7,12 +7,13 @@
 
 .recent_launch_details {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
 }
 
 .details {
+    width: 100%;
     background: #101010;
     padding: 1rem;
     border-radius: 0.8rem;
@@ -69,6 +70,8 @@
     border-radius: 0.8rem;
     padding: 0.5rem;
     transition: 0.7s all;
+    margin-left: 4rem;
+    margin-right: 5rem;
 }
 
 .rocketPhoto:hover {
@@ -82,13 +85,13 @@
 }
 
 .rocket_photo_container {
-    width: 30%;
     display: flex;
     justify-content: center;
     margin-right: 2rem;
 }
 
 .parameters_container {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -104,6 +107,5 @@
 }
 
 .parameters {
-    width: inherit;
     margin: 0;
 }

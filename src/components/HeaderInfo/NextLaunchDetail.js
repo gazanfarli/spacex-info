@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import "./index.css";
 
@@ -8,16 +9,11 @@ function NextLaunchDetail({nextLaunchTime}) {
     const date = nextLaunchTime.date_utc.slice(0,10) + "  " + nextLaunchTime.date_utc.slice(11,19);
 
     useEffect(() => {
-        fetch(`https://api.spacexdata.com/v4/rockets/${rocketID}`)
-        .then(res => res.json())
-        .then(data => {
-            setRocket(data);
-        })
-        fetch(`https://api.spacexdata.com/v4/launchpads/${nextLaunchTime.launchpad}`)
-        .then(res => res.json())
-        .then(data => {
-            setLaunchPad(data.full_name);
-        })
+        axios.get(`https://api.spacexdata.com/v4/rockets/${rocketID}`)
+        .then(res => setRocket(res.data))
+        .catch(err => console.log(err));
+        axios.get(`https://api.spacexdata.com/v4/launchpads/${nextLaunchTime.launchpad}`)
+        .then(res => setLaunchPad(res.data.full_name))
         .catch(err => console.log(err));
     }, [rocketID, nextLaunchTime.launchpad])
 

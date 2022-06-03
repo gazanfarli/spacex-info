@@ -9,6 +9,8 @@ import UpcomingParam from "./UpcomingParam";
 import CoreParam from "./CoreParam";
 import PayloadParam from "./PayloadParam";
 import RecentDetails from "./RecentDetails";
+import axios from "axios";
+import LaunchVideo from "../LaunchVideo";
 
 function RecentLaunchDetail() {
   const location = useLocation();
@@ -19,37 +21,21 @@ function RecentLaunchDetail() {
   const [landpad, setLandpad] = useState();
 
   useEffect(() => {
-    fetch(`https://api.spacexdata.com/v4/rockets/${state.data.rocket}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setRocket(data);
-      })
-      .catch((err) => console.log(err));
+    axios.get(`https://api.spacexdata.com/v4/rockets/${state.data.rocket}`)
+    .then(res => setRocket(res.data)).catch(err => console.log(err));
 
-    fetch(`https://api.spacexdata.com/v4/launchpads/${state.data.launchpad}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setLaunchSite(data.full_name);
-      })
-      .catch((err) => console.log(err));
+    axios.get(`https://api.spacexdata.com/v4/launchpads/${state.data.launchpad}`)
+    .then(res => setLaunchSite(res.data.full_name)).catch(err => console.log(err));
 
-    fetch(`https://api.spacexdata.com/v4/payloads/${state.data.payloads}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setPayloads(data);
-      })
-      .catch((err) => console.log(err));
+    axios.get(`https://api.spacexdata.com/v4/payloads/${state.data.payloads}`)
+    .then(res => setPayloads(res.data)).catch(err => console.log(err));
 
     state.data.cores[0].landpad !== null &&
-      fetch(
-        `https://api.spacexdata.com/v4/landpads/${state.data.cores[0].landpad}`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          setLandpad(data);
-        })
-        .catch((err) => console.log(err));
+    axios.get(`https://api.spacexdata.com/v4/landpads/${state.data.cores[0].landpad}`)
+    .then(res => setLandpad(res.data)).catch(err => console.log(err));
   }, []);
+
+  console.log(state.isUpcoming)
 
   const defineRocketPhoto = (name) => {
     switch (name) {
@@ -92,6 +78,10 @@ function RecentLaunchDetail() {
           )}
         </div>
       </div>
+      {
+        state.isUpcoming === undefined &&
+        <LaunchVideo embedId={state.data.links.youtube_id} />
+      }
     </div>
   );
 }

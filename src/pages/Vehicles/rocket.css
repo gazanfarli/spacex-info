@@ -26,14 +26,16 @@
 .rocket_info {
     width: 60%;
     display: flex;
+    grid-template-columns: auto auto;
     justify-content: space-between;
-    margin-top: 2rem;
     color: white;
     font-family: "Roboto";
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
 }
 
 .rocket_details {
+    display: flex;
+    flex-direction: column;
     width: 82%;
 }
 
@@ -44,8 +46,10 @@
 }
 
 .rocket_photo {
+    display: grid;
     width: 5.6rem;
     height: 56.25rem;
+    margin-right: 2rem;
 }
 
 .stages {
@@ -87,4 +91,64 @@
 .active {
     background: #006FB4;
     color: black;
+}
+
+@media (max-width: 1280px) {
+    .rocket_info {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .rocket_photo {
+        height: 700px;
+        width: 70px;
+    }
+    .rocket_photo_heavy {
+        width: 124px; 
+        height: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rocket_header h1 {
+        font-size: 3rem;
+    }
+    .rocket_header .quote {
+        font-size: 0.7rem;
+    }
+    .rocket_details {
+        flex-direction: column;
+    }
+    .stages button {
+        margin-right: 1rem;
+    }
+    .rocket_details {
+        width: 100%;
+    }
+    .stages {
+        flex-direction: column;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .rocket_photo_heavy {
+        width: 83px; 
+        height: 470px;
+    }
+    .rocket_photo {
+        width: 47px; 
+        height: 470px;
+    }
+}
+
+@media (max-width: 540px) {
+    .rocket_info {
+        grid-template-columns: max-content max-content;
+        grid-template-rows: auto auto;
+    }
+    .parameters li {
+        font-size: 0.8rem;
+    }
 }
