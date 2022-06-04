@@ -19,14 +19,14 @@
 .latest_launch_detail #rocketIcon {
     width: 14rem; 
     height: 14rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 0 0;
 }
 
 .rocket_icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 2rem;
+    margin: 0 2rem 0 0;
 }
 
 .latest_details {
@@ -69,13 +69,29 @@
 }
 
 @media (max-width: 768px) {
+    .latest_launch h1 {
+        text-align: center;
+    }
+    .rocket_icon {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+    }
     .latest_launch_detail #rocketIcon {
-        margin-right: 1rem;
+        width: 11rem;
+        height: 11rem;
+        margin: 0 1rem 0 0;
     }
     .launches {
-        padding: 0 1.5rem;
+        padding-left: 1rem;
     }
     .latest_launch_heading {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .rocket_icon {
+        width: 100%;
     }
 }

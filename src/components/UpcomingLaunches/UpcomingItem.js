@@ -2,26 +2,19 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
 import { convertDate } from "../../Helpers/DateConverter";
+import axios from "axios";
 
 function UpcomingItem({ upcoming_item, isUpcoming }) {
   const [rocket, setRocket] = useState("");
   const [launchpad, setLaunchpad] = useState("");
 
   useEffect(() => {
-    fetch(`https://api.spacexdata.com/v4/rockets/${upcoming_item.rocket}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setRocket(data);
-      });
+    axios.get(`https://api.spacexdata.com/v4/rockets/${upcoming_item.rocket}`)
+      .then((res) => setRocket(res.data)).catch(err => console.log(err));
 
-    fetch(`https://api.spacexdata.com/v4/launchpads/${upcoming_item.launchpad}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setLaunchpad(data);
-      });
+    axios.get(`https://api.spacexdata.com/v4/launchpads/${upcoming_item.launchpad}`)
+      .then((res) => setLaunchpad(res.data)).catch(err => console.log(err));
   }, [upcoming_item.launchpad, upcoming_item.rocket]);
-
-  // console.log(rocket)
 
 
   return (
@@ -40,12 +33,12 @@ function UpcomingItem({ upcoming_item, isUpcoming }) {
             <h3 className="title">COUNTRY:</h3>
             <h3>{rocket.country}</h3>
         </div>
-        <img
+        {/* <img
           loading="lazy"
           className="flag"
           src={`https://countryflagsapi.com/png/${rocket.country}`}
           alt="country_flag"
-        />
+        /> */}
       </li>
     </Link>
   );
