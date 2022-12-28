@@ -29,7 +29,7 @@ function HeaderInfo() {
       
       let end = moment(now.slice(6, 10) + "-" + now.slice(3, 5) + "-" + now.slice(0, 2), "YYYY-MM-DD");
       let start = moment(String(then.slice(6,10) + then.slice(3, 5) + then.slice(0, 2)), "YYYY-MM-DD");
-      let dayDiff = moment.duration(start.diff(end)).asDays();
+      let dayDiff = Math.abs(moment.duration(start.diff(end)).asDays());
       
       setTimeNow({
         days: dayDiff,
